@@ -1,0 +1,11 @@
+transactions,merkleRoot,middleLeafMerkleProof
+a,ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb,[]
+"a,b",e5a01fee14e0ed5c48714f22180f25ad8365b53f9779f79dc4a3d7e93963f94a,"[{""left"":""ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb""}]"
+"a,b,c",7075152d03a5cd92104887b476862778ec0c87be5c2fa1c0a90f87c49fad6eff,"[{""left"":""ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb""},{""right"":""2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6""}]"
+"a,b,c,d",,
+"a,c,b,d",,
+"d,c,b,a",,
+"a,b,c,d,e",,
+"a,b,c,d,e,f",,
+"a,b,c,d,e,f,g",,
+"a,b,c,d,e,f,g,h",,
