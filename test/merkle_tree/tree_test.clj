@@ -24,7 +24,7 @@
   (testing "three transactions"
     (is (= "7075152d03a5cd92104887b476862778ec0c87be5c2fa1c0a90f87c49fad6eff" (compute-merkle-root ["a" "b" "c"])))))
 
-(comment deftest test-merkle-proof-single
+(deftest test-merkle-proof-single
   (testing "single"
     (is (= [] (compute-merkle-proof "a" 0)))))
 
