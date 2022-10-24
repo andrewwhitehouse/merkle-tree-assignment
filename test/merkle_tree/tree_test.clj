@@ -24,3 +24,10 @@
   (testing "three transactions"
     (is (= "7075152d03a5cd92104887b476862778ec0c87be5c2fa1c0a90f87c49fad6eff" (compute-merkle-root ["a" "b" "c"])))))
 
+(comment deftest test-merkle-proof-single
+  (testing "single"
+    (is (= [] (compute-merkle-proof "a" 0)))))
+
+(comment defn test-merkle-proof-two-transactions
+  (testing "two transactions"
+    (is (= [{:left "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"}]))))

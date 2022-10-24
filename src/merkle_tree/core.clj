@@ -7,7 +7,6 @@
 
 (defn calculate-root-and-proof
   ([transactions root-fn proof-fn]
-   (println transactions (type transactions))
    (let [txns (str/split transactions #",")
          middle-leaf-index (Math/floor (/ (count txns) 2))]
      {:transactions             txns

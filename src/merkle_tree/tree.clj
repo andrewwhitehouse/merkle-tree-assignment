@@ -35,5 +35,5 @@
         (recur re-hash)))))
 
 (defn compute-merkle-proof [transactions leaf-index]
-  {})
+  )
 
