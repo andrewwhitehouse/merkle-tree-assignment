@@ -3,15 +3,16 @@
             [clojure.string :as str]
             [clojure.java.io :as io]
             [clojure.data.csv :as csv]
-            [clojure.pprint :refer [pprint]]))
+            [clojure.pprint :refer [pprint]]
+            [clojure.data.json :as json]))
 
 (defn calculate-root-and-proof
   ([transactions root-fn proof-fn]
    (let [txns (str/split transactions #",")
-         middle-leaf-index (Math/floor (/ (count txns) 2))]
+         middle-leaf-index (quot (count txns) 2)]
      {:transactions             txns
       :merkle-root              (root-fn txns)
-      :middle-left-merkle-proof (proof-fn txns middle-leaf-index)}))
+      :middle-left-merkle-proof (json/write-str (proof-fn txns middle-leaf-index))}))
   ([transactions] (calculate-root-and-proof transactions tree/compute-merkle-root tree/compute-merkle-proof)))
 
 (defn read-csv [resource]
